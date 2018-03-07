@@ -1,6 +1,6 @@
 <?php
 
-function acgmap_admin_enqueue() {
+function m_admin_enqueue() {
 
   global $typenow;
   if( $typenow != 'map' ){
@@ -10,7 +10,7 @@ function acgmap_admin_enqueue() {
 
   wp_register_style(
     'ac_bootstrap',
-    plugins_url( '/assets/styles/bootstrap.min.css', MAP_PLUGIN_URL )
+    plugins_url( '/assets/css/bootstrap.min.css', MAP_PLUGIN_URL )
   );
 
   wp_enqueue_style( 'ac_bootstrap' );

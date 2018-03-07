@@ -1,6 +1,6 @@
 <?php 
 
-function acgmap_init(){
+function map_init(){
   $labels = array(
 		'name'               => _x( 'Maps', 'post type general name', 'acgmap' ),
 		'singular_name'      => _x( 'Map', 'post type singular name', 'acgmap' ),

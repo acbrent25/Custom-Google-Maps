@@ -22,14 +22,15 @@ define( 'MAP_PLUGIN_URL', __FILE__ );
 include('includes/activate.php'); 
 include('includes/init.php'); 
 include('includes/admin/init.php');
+include('process/save-post.php');
 
 
 
 
 //Hooks
-register_activation_hook( __FILE__, 'acgmap_activate_plugin' );
-add_action( 'init', 'acgmap_init' );
-add_action( 'admin_init', 'acgmap_admin_init' );
-
+register_activation_hook( __FILE__, 'm_activate_plugin' );
+add_action( 'init', 'map_init' );
+add_action( 'admin_init', 'map_admin_init' );
+add_action( 'save_post_map', 'm_save_post_admin', 10, 3 );
 
 // Shortcodes

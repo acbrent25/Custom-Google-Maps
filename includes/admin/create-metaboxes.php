@@ -1,5 +1,5 @@
 <?php
-function acgmap_create_metaboxes() {
+function m_create_metaboxes() {
   add_meta_box( 
     'acgmap_map_options_mb',  // ID
     __( 'Maps Options', 'map' ), // Meta Box Name 
