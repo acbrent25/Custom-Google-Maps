@@ -12,6 +12,9 @@
 
 jQuery(function($){
 
+    var address = "ADDRESSLINE1_PH, CITY_PH, STATE_PH ZIPCODE_PH"; 
+    console.log('address: ' +  address)
+
     map = new GMaps({
         div: '#MAP_ID',
         zoom: 16,
@@ -33,6 +36,20 @@ jQuery(function($){
         alert('You clicked in this marker');
     }
     });
+
+GMaps.geocode({
+  address: address,
+  callback: function(results, status) {
+    if (status == 'OK') {
+      var latlng = results[0].geometry.location;
+      map.setCenter(latlng.lat(), latlng.lng());
+      map.addMarker({
+        lat: latlng.lat(),
+        lng: latlng.lng()
+      });
+    }
+  }
+});
 
 
 });
