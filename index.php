@@ -35,6 +35,6 @@ add_action( 'init', 'map_init' );
 add_action( 'admin_init', 'map_admin_init' );
 add_action( 'save_post_map', 'm_save_post_admin', 10, 3 );
 add_filter( 'the_content', 'm_filter_map_content');
-add_action( 'wp_enqueue_scripts', 'm_enqueue_scripts', 100);
+add_action( 'wp_enqueue_scripts', 'm_enqueue_scripts');
 
 // Shortcodes
