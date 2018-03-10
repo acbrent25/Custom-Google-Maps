@@ -11,6 +11,7 @@ function m_save_post_admin( $post_id, $post, $update ) {
   $map_data['city']             = sanitize_text_field( $_POST['m_city'] );
   $map_data['state']            = sanitize_text_field( $_POST['m_state'] );
   $map_data['zipCode']          = sanitize_text_field( $_POST['m_zipCode'] );
+  $map_data['marker_content']   = sanitize_text_field( $_POST['m_marker_content'] );
   $map_data['long']             = 0;
   $map_data['lat']              = 0;
 

@@ -5,11 +5,12 @@ function acgmap_map_options_mb($post){
 
   if( empty($map_data)) {
     $map_data         = array(
-      'addressLine1'  => '',
-      'addressLine2'  => '',
-      'city'          => '',
-      'state'         => '',
-      'zipCode'       => ''
+      'addressLine1'      => '',
+      'addressLine2'      => '',
+      'city'              => '',
+      'state'             => '',
+      'zipCode'           => '',
+      'marker_content'    => ''
     );
   }
   ?> 
@@ -48,6 +49,12 @@ function acgmap_map_options_mb($post){
         <div class="form-group">
           <label for="m_zipCode">Zip Code</label>
           <input type="text" class="form-control" name="m_zipCode" value="<?php echo $map_data['zipCode']; ?>" id="m_zipCode" placeholder="Enter Zip Code">
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label for="m_marker_content">Map Marker Content</label>
+          <input type="text" class="form-control" name="m_marker_content" value="<?php echo $map_data['marker_content']; ?>" id="m_marker_content" placeholder="Enter Map Marker Content">
         </div>
       </div>
     </div>

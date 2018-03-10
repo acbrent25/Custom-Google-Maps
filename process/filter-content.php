@@ -13,6 +13,7 @@ function m_filter_map_content($content) {
     $map_html               = str_replace('CITY_PH', $map_data['city'], $map_html);
     $map_html               = str_replace('STATE_PH', $map_data['state'], $map_html);
     $map_html               = str_replace('ZIPCODE_PH', $map_data['zipCode'], $map_html);
+    $map_html               = str_replace('MARKER_CONTENT_PH', $map_data['marker_content'], $map_html);
 
     $map_html               = str_replace('MAP_ID', $post->ID, $map_html);
     
